@@ -1,0 +1,30 @@
+<div class="divider d-flex align-items-center my-4">
+    <p class="text-center fw-bold mx-3 mb-0">Welcome</p>
+</div>
+<form [formGroup]="fLogin" class="was-validated" (ngSubmit)="submitForm()">
+
+    <!-- Email input -->
+    <div class="form-outline mb-4">
+        <input type="email" id="in-email" formControlName="email" class="form-control form-control-lg"
+            placeholder="mail@mail.com" />
+        <label class="form-label" for="in-email">Email</label>
+    </div>
+
+    <!-- Password input -->
+    <div class="form-outline mb-3">
+        <input type="password" id="in-password" formControlName="password" class="form-control form-control-lg"
+            placeholder="*****" />
+        <div class="invalid-feedback">
+            Please provide a valid city.
+        </div>
+        <label class="form-label" for="in-password">Contraseña</label>
+    </div>
+
+    <div class="text-center text-lg-start mt-4 pt-2">
+        <button type="submit" class="btn btn-primary btn-lg"
+            style="padding-left: 2.5rem; padding-right: 2.5rem;">Acceder</button>
+        <p class="small fw-bold mt-2 pt-1 mb-0">No tiene cuenta? <a [routerLink]="['/access/register']"
+                class="link-danger">Registro</a></p>
+    </div>
+
+</form>
