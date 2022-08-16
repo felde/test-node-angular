@@ -2,10 +2,34 @@
 
 Este desarrollo esta desarrollado con las siguientes caracteristicas:
 
-# Herramientas graficas
+## Herramientas front
 
 - [Ng-Bootstrap](https://ng-bootstrap.github.io/)
 - [NG-ZORRO](https://ng.ant.design/docs/introduce/en)
+
+## Herramientas backend
+
+- [NodeJS](https://nodejs.org/es/)
+
+## Instalación de dependecias y puesta en marcha
+
+- en consola navegar hasta el repositorio clonado
+### front
+
+- cd front
+- npm i --save
+- npm run start:local
+- [Nevegar al sitio](http://localhost:4200)
+#### Para publicar en local
+- npm run build:local
+- [Nevegar al sitio local](http://localhost:8080)
+### back
+
+- cd api
+- npm i --save
+- npm run start:dev
+- [Nevegar a la api](http://localhost:8080)
+
 
 # Requerimiento
 
