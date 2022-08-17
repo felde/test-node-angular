@@ -16,21 +16,30 @@ Este desarrollo esta desarrollado con las siguientes caracteristicas:
 
 ### front
 
-- cd front
-- npm i --save
-- npm run start:local
+```
+$ cd front
+$ npm i --save
+$ npm run start:local
+```
+
 - [Nevegar al sitio](http://localhost:4200)
 
 #### Para publicar en local
 
-- npm run build:local
+```
+$ npm run build:local
+```
+
 - [Nevegar al sitio local](http://localhost:8080)
 
 ### back
 
-- cd api
-- npm i --save
-- npm run start:dev
+```
+$ cd api
+$ npm i --save
+$ npm run start:dev
+```
+
 - [Nevegar a la api](http://localhost:8080)
 
 # Requerimiento
