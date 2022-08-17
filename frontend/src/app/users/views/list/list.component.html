@@ -1,1 +1,76 @@
-<p>list works!</p>
+<main role="main">
+
+    <section class="jumbotron text-center mb-0">
+        <div class="container">
+            <h1 class="jumbotron-heading">Listado de usuarios</h1>
+            <p class="lead text-muted">A continuación de muestran los usuarios registrados</p>
+            <p>
+                <a class="btn btn-secondary my-2 " (click)="open(content)">Agregar usuario</a>
+            </p>
+        </div>
+    </section>
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-2">
+                    <input class="form-control" placeholder="Buscar..." [(ngModel)]="filter"
+                        (input)="searchData($event.target)" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3" *ngFor="let item of usersFilter">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <p class="card-text">{{item.email}}</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                </div>
+                                <small class="text-muted">{{getRol(item.rol)}}</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</main>
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Crear usuario</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <form [formGroup]="fRegister" class="was-validated" (ngSubmit)="submitForm()">
+        <div class="modal-body">
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+                <input type="email" id="in-email" formControlName="email" class="form-control form-control-lg"
+                    placeholder="mail@mail.com" />
+                <label class="form-label" for="in-email">Email</label>
+            </div>
+
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+                <input type="password" id="in-password" formControlName="password" class="form-control form-control-lg"
+                    placeholder="*****" />
+                <div class="invalid-feedback">
+                    Please provide a valid city.
+                </div>
+                <label class="form-label" for="in-password">Contraseña</label>
+            </div>
+            <!-- Rol select -->
+            <div class="form-outline mb-3">
+                <select id="in-rol" formControlName="rol" class="form-control form-control-lg">
+                    <option value="">--Selecccione un rol--</option>
+                    <option value="1">Admin</option>
+                    <option value="2">Usuario</option>
+                </select>
+                <label class="form-label" for="in-rol">Contraseña</label>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+        </div>
+    </form>
+</ng-template>

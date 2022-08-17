@@ -1,2 +1,17 @@
-<p>template works!</p>
+<header>
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container d-flex justify-content-between">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+                <strong>Listado de usuarios</strong>
+            </a>
+
+        </div>
+    </div>
+</header>
 <router-outlet></router-outlet>
+<footer class="text-muted">
+    <div class="container text-center  pt-2">
+        <p>Desarrollo echo para propositos de evaluación <br> <a [routerLink]="['/access/logout']">Salir</a></p>
+
+    </div>
+</footer>
