@@ -5,7 +5,6 @@ Este desarrollo esta desarrollado con las siguientes caracteristicas:
 ## Herramientas front
 
 - [Ng-Bootstrap](https://ng-bootstrap.github.io/)
-- [NG-ZORRO](https://ng.ant.design/docs/introduce/en)
 
 ## Herramientas backend
 
@@ -86,3 +85,19 @@ Al ingresar como rol ‘usuario’ debe mostrarse un modal diciendo que no puede
 [Api complete](https://github.com/felde/test-node-angular/commit/ec5cb049277d8292aa0e277d999994d163a730f1)
 
 Se agrega parte back end en NodeJS
+
+[init front project](https://github.com/felde/test-node-angular/commit/d119bc7d455233a236d28fe6dda1a9b07d1ae338)
+
+Se inicializa el proyecto angular front
+
+[login mponent](https://github.com/felde/test-node-angular/commit/b1f9ea7a6cb28939baab2f442dc0a054de638884)
+
+Fromulario de logea y acceso a sitio
+
+[register and logout](https://github.com/felde/test-node-angular/commit/cfb7fa8bd308570978d860390e904b638e722177)
+
+Se agrega formulario de registro y template de logout
+
+[users list](https://github.com/felde/test-node-angular/commit/f42ebe0e13dcf43f1b349143e48eb9df1041452d)
+
+Se agrega componente del listado de usuario con las validaciones solicitadas
